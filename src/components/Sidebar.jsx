@@ -14,7 +14,7 @@ export default function Sidebar({ view, onNavigate, onOpenSettings }) {
           <span className="bulb" />
           <span className="bulb" />
         </div>
-        <div className="brand-name">MARQUEE</div>
+        <div className="brand-name">Xavi</div>
       </div>
 
       <nav className="nav">

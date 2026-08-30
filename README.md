@@ -1,4 +1,4 @@
-# Marquee — a TMDB desktop browser (practice project)
+# Xavi — a TMDB desktop browser (practice project)
 
 An Electron + React (Vite) desktop app for browsing trending movies & TV shows,
 searching, viewing details/cast, watching official trailers, and keeping a local
@@ -54,7 +54,7 @@ npm run dist:mac    # macOS disk image (.dmg)
 npm run dist:linux  # Linux AppImage
 ```
 
-Output lands in `release/` — e.g. `release/Marquee Setup 1.0.0.exe` on Windows, or
+Output lands in `release/` — e.g. `release/Xavi Setup 2.0.0.exe` on Windows, or
 `release/linux-unpacked/tmdb-streamer` for an unpacked Linux build.
 
 Notes:

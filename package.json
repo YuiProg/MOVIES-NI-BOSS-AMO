@@ -1,7 +1,7 @@
 {
   "name": "tmdb-streamer",
-  "version": "1.0.0",
-  "description": "Practice desktop app (React + Electron) for browsing movies & TV via the TMDB API",
+  "version": "2.0.0",
+  "description": "Xavi Movies",
   "main": "main.js",
   "scripts": {
     "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env ELECTRON_START_URL=http://localhost:5173 electron .\"",
@@ -29,8 +29,8 @@
     "wait-on": "^7.2.0"
   },
   "build": {
-    "appId": "com.practice.marquee",
-    "productName": "Marquee",
+    "appId": "com.practice.Xavi",
+    "productName": "Xavi",
     "directories": {
       "output": "release"
     },

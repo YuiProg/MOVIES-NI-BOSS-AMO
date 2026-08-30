@@ -21,7 +21,7 @@ export default function TopBar({ query, onSearch }) {
       {/* Left: Branding / App Title */}
       <div className="topbar-left">
         <div className="topbar-badge">M</div>
-        <span className="topbar-title">VIDEO STREAMER NI GAR</span>
+        <span className="topbar-title">YuiDev</span>
       </div>
 
       {/* Middle: Search Field */}
