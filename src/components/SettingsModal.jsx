@@ -27,15 +27,14 @@ export default function SettingsModal() {
             <span className="bulb" />
             <span className="bulb" />
           </div>
-          <h2>Connect your TMDB account</h2>
+          <h2>HINGI MUNA SUSI MAAM SIR</h2>
           <p className="modal-overview">
-            Paste your TMDB <strong>API Read Access Token</strong> (v4 auth) below. It's stored only on this
-            machine.
+            Paste mo dito yung <strong>API Read Access Token</strong> na bigay ni sir.
           </p>
           <input
             type="password"
             className="token-input"
-            placeholder="Paste your TMDB Read Access Token…"
+            placeholder="HINGI KA MUNA SUSI MAAM SIR"
             value={value}
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={(e) => {

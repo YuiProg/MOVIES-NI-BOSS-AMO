@@ -6,8 +6,8 @@ export default function EpisodeModal() {
 
   if (!episodeTarget) return null;
   const { episode: ep, showTitle, season_number, episode_number } = episodeTarget;
-  //console.log(episodeTarget, season_number, episode_number, ep);
-  console.log(`https://vidsrc.sbs/embed/tv/${episodeTarget.episode.id}/${ep.season_number}/${ep.episode_number}`);
+  console.log(episodeTarget);
+  console.log(`https://vidsrc.sbs/embed/tv/${episodeTarget.id}/${ep.season_number}/${ep.episode_number}`);
   return (
     <div
       className="modal-overlay"
@@ -37,9 +37,11 @@ export default function EpisodeModal() {
 
           <div className="video-placeholder">
             <iframe
-              src={`https://vidsrc.sbs/embed/tv/${episodeTarget.episode.id}/${ep.season_number}/${ep.episode_number}`}
-            >
-            </iframe>
+              src={`https://vidsrc.sbs/embed/tv/${episodeTarget.episode.show_id}/${ep.season_number}/${ep.episode_number}`}
+              width="100%"
+              height="100%"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>

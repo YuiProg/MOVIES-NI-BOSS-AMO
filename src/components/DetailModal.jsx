@@ -107,7 +107,7 @@ export default function DetailModal() {
               )}
               <div className="modal-actions">
                 <button className="btn btn-primary" disabled={!trailerKey} onClick={() => setShowTrailer(true)}>
-                  {trailerKey ? '▸ Watch Trailer' : 'No trailer available'}
+                  {trailerKey ? '▸ Watch Movie' : 'No movie available'}
                 </button>
                 <button
                   className="btn btn-ghost"
