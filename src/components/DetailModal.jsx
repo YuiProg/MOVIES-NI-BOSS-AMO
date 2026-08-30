@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useApp } from '../context/AppContext.jsx';
 import { backdropUrl, profileUrl } from '../utils/images.js';
+import EpisodeBrowser from './EpisodeBrowser.jsx';
 
 export default function DetailModal() {
   const {
@@ -100,9 +101,13 @@ export default function DetailModal() {
                   </div>
                 ))}
               </div>
+
+              {kind === 'tv' && (
+                <EpisodeBrowser showId={details.id} showTitle={details.name} seasons={details.seasons} />
+              )}
               <div className="modal-actions">
                 <button className="btn btn-primary" disabled={!trailerKey} onClick={() => setShowTrailer(true)}>
-                  {trailerKey ? '▸ Watch Movie' : 'No trailer available'}
+                  {trailerKey ? '▸ Watch Trailer' : 'No trailer available'}
                 </button>
                 <button
                   className="btn btn-ghost"

@@ -41,6 +41,32 @@ Your token and watchlist are stored locally in your OS's app-data folder
 - **Details modal** — synopsis, cast, rating, genres, and trailer playback
 - **Watchlist** — add/remove titles, persisted to disk between launches
 
+## Building an installer (.exe / .dmg / .AppImage)
+
+`npm run build` (or `npm start`) only bundles the React frontend into `dist/` — it
+doesn't produce a distributable app. For an actual installer, this project uses
+[electron-builder](https://www.electron.build/):
+
+```bash
+npm run dist        # builds for your current OS
+npm run dist:win    # Windows installer (.exe, via NSIS)
+npm run dist:mac    # macOS disk image (.dmg)
+npm run dist:linux  # Linux AppImage
+```
+
+Output lands in `release/` — e.g. `release/Marquee Setup 1.0.0.exe` on Windows, or
+`release/linux-unpacked/tmdb-streamer` for an unpacked Linux build.
+
+Notes:
+- Building a **Windows `.exe` works best when run on Windows itself**. Cross-building
+  it from macOS/Linux is possible with electron-builder but requires Wine installed.
+- The app isn't code-signed, so Windows SmartScreen / macOS Gatekeeper may warn on
+  first run since this is an unsigned personal build — that's expected for a practice
+  project without a paid code-signing certificate.
+- Feel free to add an app icon by dropping an `icon.ico` (Windows) / `icon.icns`
+  (macOS) / `icon.png` (Linux) somewhere like `build/` and pointing to it via
+  `"win": { "icon": "build/icon.ico" }` etc. in the `build` config in `package.json`.
+
 ## Project structure
 
 ```

@@ -1,5 +1,3 @@
-import InputField from "./TRCOMPONENTS/TRInputField/InputFIeld";
-
 export default function TopBar({ query, onSearch }) {
   return (
     <header className="topbar">

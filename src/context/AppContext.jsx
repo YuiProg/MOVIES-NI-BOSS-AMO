@@ -12,6 +12,7 @@ export function AppProvider({ children }) {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [settingsHint, setSettingsHint] = useState('');
   const [detailTarget, setDetailTarget] = useState(null); // { id, type, autoTrailer }
+  const [episodeTarget, setEpisodeTarget] = useState(null); // { episode, showTitle }
 
   useEffect(() => {
     (async () => {
@@ -102,6 +103,12 @@ export function AppProvider({ children }) {
 
   const closeDetail = useCallback(() => setDetailTarget(null), []);
 
+  const openEpisode = useCallback((episode, showTitle, id) => {
+    setEpisodeTarget({ episode, showTitle, id });
+  }, []);
+
+  const closeEpisode = useCallback(() => setEpisodeTarget(null), []);
+
   const value = {
     token,
     ready,
@@ -117,6 +124,9 @@ export function AppProvider({ children }) {
     detailTarget,
     openDetail,
     closeDetail,
+    episodeTarget,
+    openEpisode,
+    closeEpisode,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

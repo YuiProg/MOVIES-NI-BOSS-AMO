@@ -18,7 +18,7 @@ export default function Hero({ item }) {
         <p className="hero-overview">{item.overview}</p>
         <div className="hero-actions">
           <button className="btn btn-primary" onClick={() => openDetail(item.id, type, { autoTrailer: true })}>
-            ▸ Watch Now
+            ▸ Watch Trailer
           </button>
           <button className="btn btn-ghost" onClick={() => openDetail(item.id, type)}>
             Details

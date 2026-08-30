@@ -13,3 +13,4 @@ export const PLACEHOLDER_PROFILE =
 export const posterUrl = (p) => (p ? `https://image.tmdb.org/t/p/w342${p}` : PLACEHOLDER);
 export const backdropUrl = (p) => (p ? `https://image.tmdb.org/t/p/w1280${p}` : '');
 export const profileUrl = (p) => (p ? `https://image.tmdb.org/t/p/w185${p}` : PLACEHOLDER_PROFILE);
+export const stillUrl = (p) => (p ? `https://image.tmdb.org/t/p/w300${p}` : PLACEHOLDER);

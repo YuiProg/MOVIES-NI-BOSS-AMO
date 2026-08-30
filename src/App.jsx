@@ -3,6 +3,7 @@ import { useApp } from './context/AppContext.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import TopBar from './components/TopBar.jsx';
 import DetailModal from './components/DetailModal.jsx';
+import EpisodeModal from './components/EpisodeModal.jsx';
 import SettingsModal from './components/SettingsModal.jsx';
 import HomeView from './views/HomeView.jsx';
 import MoviesView from './views/MoviesView.jsx';
@@ -41,6 +42,7 @@ export default function App() {
         </div>
       </main>
       <DetailModal />
+      <EpisodeModal />
       <SettingsModal />
     </div>
   );
