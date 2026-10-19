@@ -37,7 +37,7 @@ export default function EpisodeModal() {
 
           <div className="video-placeholder">
             <iframe
-              src={`https://vidsrc.sbs/embed/tv/${episodeTarget.episode.show_id}/${ep.season_number}/${ep.episode_number}`}
+              src={`https://vidcore.org/embed/tv/${episodeTarget.episode.show_id}/${ep.season_number}/${ep.episode_number}`}
               width="100%"
               height="100%"
               allowFullScreen
