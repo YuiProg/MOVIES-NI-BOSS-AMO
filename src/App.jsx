@@ -6,6 +6,7 @@ import TopBar from './components/TopBar.jsx';
 import DetailModal from './components/DetailModal.jsx';
 import EpisodeModal from './components/EpisodeModal.jsx';
 import SettingsModal from './components/SettingsModal.jsx';
+import RecentlyWatched from './components/RecentlyWatched.jsx';
 import HomeView from './views/HomeView.jsx';
 import MoviesView from './views/MoviesView.jsx';
 import TvView from './views/TvView.jsx';
@@ -35,15 +36,20 @@ export default function App() {
       {showIntro && <IntroAnimation onComplete={() => setShowIntro(false)} />}
 
       <div className="app">
-        <Sidebar 
-          view={view} 
-          onNavigate={handleNavigate} 
-          onOpenSettings={() => setSettingsOpen(true)} 
+        <Sidebar
+          view={view}
+          onNavigate={handleNavigate}
+          onOpenSettings={() => setSettingsOpen(true)}
         />
         <main className="main">
           <TopBar query={query} onSearch={handleSearch} />
           <div className="view-scroll">
-            {view === 'home' && <HomeView />}
+            {view === 'home' && (
+              <>
+                <RecentlyWatched />
+                <HomeView />
+              </>
+            )}
             {view === 'movies' && <MoviesView />}
             {view === 'tv' && <TvView />}
             {view === 'watchlist' && <WatchlistView />}

@@ -1,13 +1,20 @@
+import { useEffect } from 'react';
 import { useApp } from '../context/AppContext.jsx';
 import { stillUrl } from '../utils/images.js';
+import { addRecentlyWatched } from '../utils/recentlyWatched.js';
 
 export default function EpisodeModal() {
   const { episodeTarget, closeEpisode } = useApp();
 
+  // Hooks must run before the early return below
+  useEffect(() => {
+    if (episodeTarget) addRecentlyWatched(episodeTarget);
+  }, [episodeTarget]);
+
   if (!episodeTarget) return null;
-  const { episode: ep, showTitle, season_number, episode_number } = episodeTarget;
-  console.log(episodeTarget);
-  console.log(`https://vidsrc.sbs/embed/tv/${episodeTarget.id}/${ep.season_number}/${ep.episode_number}`);
+  const { episode: ep, showTitle } = episodeTarget;
+  const showId = ep.show_id ?? episodeTarget.id;
+
   return (
     <div
       className="modal-overlay"
@@ -37,7 +44,7 @@ export default function EpisodeModal() {
 
           <div className="video-placeholder">
             <iframe
-              src={`https://vidcore.org/embed/tv/${episodeTarget.episode.show_id}/${ep.season_number}/${ep.episode_number}`}
+              src={`https://vidcore.org/embed/tv/${showId}/${ep.season_number}/${ep.episode_number}`}
               width="100%"
               height="100%"
               allowFullScreen

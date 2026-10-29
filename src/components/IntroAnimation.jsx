@@ -34,7 +34,7 @@ export default function IntroAnimation({ onComplete }) {
           <span></span>
           <span></span>
         </div>
-        <h1 className="intro-logo">XAVI</h1>
+        <h1 className="intro-logo">Apollo</h1>
       </div>
     </div>
   );

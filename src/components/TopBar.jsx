@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { version } from '../../package.json';
 
 export default function TopBar({ query, onSearch }) {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -20,8 +21,8 @@ export default function TopBar({ query, onSearch }) {
     <header className="topbar">
       {/* Left: Branding / App Title */}
       <div className="topbar-left">
-        <div className="topbar-badge">M</div>
-        <span className="topbar-title">YuiDev</span>
+        <div className="topbar-badge">Y</div>
+        <span className="topbar-title">v{version}</span>
       </div>
 
       {/* Middle: Search Field */}
