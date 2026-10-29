@@ -1,4 +1,4 @@
-# Xavi — a TMDB desktop browser (practice project)
+# Apollo — a TMDB desktop browser (practice project)
 
 An Electron + React (Vite) desktop app for browsing trending movies & TV shows,
 searching, viewing details/cast, watching official trailers, and keeping a local
