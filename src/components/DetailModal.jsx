@@ -121,7 +121,7 @@ export default function DetailModal() {
               {showTrailer && trailerKey && (
                 <div className="trailer-wrap">
                   <iframe
-                    src={`https://vidcore.org/embed/movie/${detailTarget.id}`}
+                    src={`https://vidsrc.to/embed/movie/${detailTarget.id}`}
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                     title="Trailer"

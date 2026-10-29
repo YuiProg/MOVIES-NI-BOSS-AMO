@@ -1,6 +1,6 @@
 {
   "name": "tmdb-streamer",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Apollo Movies",
   "main": "main.js",
   "scripts": {
@@ -15,6 +15,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@ghostery/adblocker-electron": "^2.18.2",
+    "cross-fetch": "^4.1.0",
     "lucide-react": "^1.33.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -40,15 +42,21 @@
       "preload.js"
     ],
     "win": {
-      "target": ["nsis"],
+      "target": [
+        "nsis"
+      ],
       "icon": "build/icon.png"
     },
     "mac": {
-      "target": ["dmg"],
+      "target": [
+        "dmg"
+      ],
       "icon": "build/icon.png"
     },
     "linux": {
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "icon": "build/icon.png"
     }
   }
